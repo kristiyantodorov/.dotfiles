@@ -51,7 +51,7 @@ ZSH_THEME="amuse"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git expand-aliases)
+plugins=(git globalias)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,3 +94,9 @@ alias sagi="sudo apt-get install"
 alias sagie="sudo -E apt-get install"
 eval $(thefuck --alias)
 sf="/mnt/hgfs/Downloads/Shared"
+alias hiber="sudo systemctl hibernate"
+
+# Set alias for all editor types to point to VS code
+alias vi="code"
+alias subl="code"
+alias ps="ps -ax"
