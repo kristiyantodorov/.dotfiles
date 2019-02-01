@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/devteam/.oh-my-zsh
+  export ZSH=/home/adas/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -83,16 +83,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /opt/ros/kinetic/setup.zsh
+#source /opt/ros/kinetic/setup.zsh
 alias b="cd .."
 alias ls="ls -l"
 alias ls="ls -l --color=auto"
 adas="adas@10.185.26.123"
+xps="adas@10.185.27.170"
 alias adas="ssh $adas"
+alias xps="ssh $xps"
 alias kl="kill -9 "
-alias sagi="sudo apt-get install"
-alias sagie="sudo -E apt-get install"
-eval $(thefuck --alias)
+alias sagi="sudo apt install"
+alias sagie="sudo -E apt install"
 sf="/mnt/hgfs/Downloads/Shared"
 alias hiber="sudo systemctl hibernate"
 
@@ -100,3 +101,25 @@ alias hiber="sudo systemctl hibernate"
 alias vi="code"
 alias subl="code"
 alias ps="ps -ax"
+
+#echo "Enter username:"
+#read UNAME
+UNAME="ktodoro2"
+
+#echo "Enter password:"
+#read -s PASS
+PASS="Etamitlu_12"
+
+export http_proxy="http://$UNAME:$PASS@136.17.0.7:83/"
+export https_proxy="http://$UNAME:$PASS@136.17.0.7:83/"
+export ftp_proxy="http://$UNAME:$PASS@136.17.0.7:83/"
+export no_proxy="http://$UNAME:$PASS@136.17.0.7:83/"
+export HTTP_PROXY="http://$UNAME:$PASS@136.17.0.7:83/"
+export HTTPS_PROXY="http://$UNAME:$PASS@136.17.0.7:83/"
+export FTP_PROXY="http://$UNAME:$PASS@136.17.0.7:83/"
+export NO_PROXY="http://$UNAME:$PASS@136.17.0.7:83/"
+
+alias dcs="cd ~/workspace/dc-studio-workspace"
+alias rt="cd ~/workspace/dc_runtime_ws/dc-studio-workspace"
+alias proxy=". ~/proxy_export.sh set"
+alias noproxy=". ~/proxy_export.sh unset"
