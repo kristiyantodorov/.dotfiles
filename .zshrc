@@ -51,7 +51,7 @@ ZSH_THEME="amuse"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git globalias)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,7 +85,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #source /opt/ros/kinetic/setup.zsh
 alias b="cd .."
-alias ls="ls -l"
 alias ls="ls -l --color=auto"
 adas="adas@10.185.26.123"
 xps="adas@10.185.27.170"
@@ -94,12 +93,9 @@ alias xps="ssh $xps"
 alias kl="kill -9 "
 alias sagi="sudo apt install"
 alias sagie="sudo -E apt install"
-sf="/mnt/hgfs/Downloads/Shared"
-alias hiber="sudo systemctl hibernate"
+alias work="cd /home/adas/workspace"
 
 # Set alias for all editor types to point to VS code
-alias vi="code"
-alias subl="code"
 alias ps="ps -ax"
 
 #echo "Enter username:"
@@ -108,18 +104,33 @@ UNAME="ktodoro2"
 
 #echo "Enter password:"
 #read -s PASS
-PASS="Etamitlu_12"
+PASS=""
 
-export http_proxy="http://$UNAME:$PASS@136.17.0.7:83/"
-export https_proxy="http://$UNAME:$PASS@136.17.0.7:83/"
-export ftp_proxy="http://$UNAME:$PASS@136.17.0.7:83/"
-export no_proxy="http://$UNAME:$PASS@136.17.0.7:83/"
-export HTTP_PROXY="http://$UNAME:$PASS@136.17.0.7:83/"
-export HTTPS_PROXY="http://$UNAME:$PASS@136.17.0.7:83/"
-export FTP_PROXY="http://$UNAME:$PASS@136.17.0.7:83/"
-export NO_PROXY="http://$UNAME:$PASS@136.17.0.7:83/"
+#export http_proxy="http://$UNAME:$PASS@136.17.0.7:83/"
+#export https_proxy="http://$UNAME:$PASS@136.17.0.7:83/"
+#export ftp_proxy="http://$UNAME:$PASS@136.17.0.7:83/"
+#export no_proxy="http://$UNAME:$PASS@136.17.0.7:83/"
+#export HTTP_PROXY="http://$UNAME:$PASS@136.17.0.7:83/"
+#export HTTPS_PROXY="http://$UNAME:$PASS@136.17.0.7:83/"
+#export FTP_PROXY="http://$UNAME:$PASS@136.17.0.7:83/"
+#export NO_PROXY="http://$UNAME:$PASS@136.17.0.7:83/"
 
 alias dcs="cd ~/workspace/dc-studio-workspace"
-alias rt="cd ~/workspace/dc_runtime_ws/dc-studio-workspace"
+alias rt="cd ~/workspace/dc-runtime-ws/dc-studio-workspace"
 alias proxy=". ~/proxy_export.sh set"
 alias noproxy=". ~/proxy_export.sh unset"
+alias dcslog="tail -f ~/.dcstudio/runtime/logs/current"
+
+# ROS ALIASES
+alias rte="ros2 topic echo"
+alias rnl="ros2 node list"
+alias rtl="ros2 topic list"
+
+# Vires licenses
+export VI_LIC_SERVER_ADDRESS=136.16.200.39
+export VI_LIC_SERVER=slhepv0015.ctsslou.visteon.com
+export LC_NUMERIC="C" 
+export VTD_ROOT=$HOME/VIRES/VTD
+
+export ROS_DOMAIN_ID=125
+
