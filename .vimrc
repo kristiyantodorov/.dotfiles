@@ -17,13 +17,17 @@ Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
 Plugin 'tomasr/molokai'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'nvie/vim-flake8'
 Plugin 'c.vim'
+
+Plugin 'scrooloose/nerdtree'
+map <C-n> :NERDTreeToggle<CR>
+
+Plugin 'jonathanfilip/vim-lucius'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,12 +43,14 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
-colorscheme molokai
+"
+colorscheme lucius
+set number
+set relativenumber
 
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 nnoremap == V=
 
